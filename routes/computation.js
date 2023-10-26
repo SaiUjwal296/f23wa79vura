@@ -4,7 +4,8 @@ router.get('/', function(req, res, next) {
     var x = Math.round(Math.random()*10);
     var z = Math.round(Math.random()*20);
     var result = Math.sin(x,z);
-
+    var x = parseFloat(req.query.x) || Math.round(Math.random()*10);
+    var z = parseFloat(req.query.z) || Math.round(Math.random()*20);
     
     
     res.setHeader('Content-Type', 'text/html'); 
